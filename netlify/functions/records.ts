@@ -51,6 +51,7 @@ export default async (req: Request) => {
         profileId,
         by,
         note: note || '',
+        fed: true,
         createdAt: Date.now()
       };
 

@@ -13,7 +13,7 @@ export default async (req: Request) => {
     }
 
     const id = petName.toLowerCase().trim();
-    const store = getStore("profiles");
+    const store = getStore("users");
     
     const profileStr = await store.get(id);
     

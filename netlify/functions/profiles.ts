@@ -2,7 +2,7 @@ import { getStore } from '@netlify/blobs';
 
 export default async (req: Request) => {
   const method = req.method;
-  const store = getStore("profiles");
+  const store = getStore("users");
 
   if (method === 'GET') {
     const url = new URL(req.url);

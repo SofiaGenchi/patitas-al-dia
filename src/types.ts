@@ -12,5 +12,6 @@ export interface FoodRecord {
   profileId: string;
   by: string;
   note: string;
+  fed: boolean;
   createdAt: number;
 }
