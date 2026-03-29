@@ -13,7 +13,6 @@ export default function Dashboard() {
   const [fedToggle, setFedToggle] = useState(false);
   const [note, setNote] = useState('');
   const [who, setWho] = useState('');
-  const [loading, setLoading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
