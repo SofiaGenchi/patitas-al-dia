@@ -53,3 +53,4 @@ Las funciones severless que actúan como API REST se encuentran en la carpeta `n
 - `profiles.ts`: Permite comprobar perfiles existentes y crear uno nuevo (usa el Blob store "profiles").
 - `login.ts`: Valida las credenciales comprobando en "profiles".
 - `records.ts`: Consulta y añade nuevos registros de alimentación en el Blob store "records" asociado a la ID de la mascota.
+# patitas-al-dia
