@@ -26,10 +26,10 @@ export default function Dashboard() {
     
     fetchRecords(parsed.id);
 
-    // Polling every 10 seconds
+    // Polling every 3 seconds for near real-time updates
     const interval = setInterval(() => {
       fetchRecords(parsed.id);
-    }, 10000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [navigate]);
@@ -59,7 +59,8 @@ export default function Dashboard() {
     const success = await api.createRecord({
       profileId: profile.id,
       by: who.trim(),
-      note: note.trim()
+      note: note.trim(),
+      fed: true
     });
 
     setSubmitting(false);
@@ -104,6 +105,19 @@ export default function Dashboard() {
             <span className="text-slate-800 font-bold uppercase tracking-widest text-sm">YA COMI</span>
             <span className="text-2xl">{profile.emoji}</span>
           </div>
+          {records.length > 0 ? (
+            <div className="mt-3 inline-block bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-100">
+              <p className="text-sm text-emerald-800 flex items-center gap-2">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                Última vez: <strong className="font-bold">{records[records.length - 1].by}</strong> a las {format(new Date(records[records.length - 1].createdAt), 'HH:mm')}
+              </p>
+            </div>
+          ) : (
+             <p className="text-sm text-gray-400 mt-2 italic">Aún no le dieron de comer.</p>
+          )}
         </div>
 
         {/* FEEDING FORM */}
