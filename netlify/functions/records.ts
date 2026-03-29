@@ -23,8 +23,8 @@ export default async (req: Request) => {
         if (itemStr) records.push(JSON.parse(itemStr));
       }
 
-      // Sort chronological, oldest first as requested (1, 2, 3...)
-      records.sort((a, b) => a.createdAt - b.createdAt);
+      // Sort chronological, newest first
+      records.sort((a, b) => b.createdAt - a.createdAt);
 
       return new Response(JSON.stringify({ records }), {
         status: 200,

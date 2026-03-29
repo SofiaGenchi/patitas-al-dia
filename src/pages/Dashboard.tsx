@@ -112,7 +112,7 @@ export default function Dashboard() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                 </span>
-                Última vez: <strong className="font-bold">{records[records.length - 1].by}</strong> a las {format(new Date(records[records.length - 1].createdAt), 'HH:mm')}
+                Última vez: <strong className="font-bold">{records[0].by}</strong> a las {format(new Date(records[0].createdAt), 'HH:mm')}
               </p>
             </div>
           ) : (
@@ -198,7 +198,7 @@ export default function Dashboard() {
                         </p>
                       </div>
                       {record.note && (
-                        <p className="text-sm text-gray-500 italic truncate border-t border-gray-50 pt-1 mt-1">
+                        <p className="text-sm text-gray-600 italic border-t border-gray-50 pt-1 mt-1 break-words">
                           "{record.note}"
                         </p>
                       )}
