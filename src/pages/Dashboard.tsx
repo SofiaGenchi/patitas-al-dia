@@ -39,7 +39,10 @@ export default function Dashboard() {
     setRecords(data);
   };
 
-  const currentFormattedDate = format(new Date(), "EEEE d yyyy", { locale: es }).toLowerCase();
+  const rawDate = format(new Date(), "EEEE d 'de' MMMM 'de' yyyy", { locale: es });
+  const currentFormattedDate = rawDate.split(' ').map((word: string) => 
+    word === 'de' ? word : word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
 
   const handleLogout = () => {
     sessionStorage.removeItem('patitas_profile');
@@ -82,7 +85,7 @@ export default function Dashboard() {
       
       {/* HEADER */}
       <div className="flex justify-between items-center p-6 pb-2 pt-8">
-        <span className="text-sm font-medium text-gray-500 capitalize tracking-wide">
+        <span className="text-sm font-medium text-gray-500 tracking-wide">
           {currentFormattedDate}
         </span>
         <button 
