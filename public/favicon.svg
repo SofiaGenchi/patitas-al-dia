@@ -1,5 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#f97316" stroke="none">
-    <path d="M12 21.04C10.74 21.36 9.38 21.5 8 21.5C3.33 21.5 2 17 2 14c0-2.3 2-4.59 4-4.59 3 0 4.14 1.76 6 1.76 1.86 0 3-1.76 6-1.76 2 0 4 2.29 4 4.59 0 3-1.33 7.5-6 7.5-1.38 0-2.74-.14-4-.46Z" />
-    <path d="M7.5 9c1.93 0 3.5-2.01 3.5-4.5S9.43 0 7.5 0 4 2.01 4 4.5 5.57 9 7.5 9Z" />
-    <path d="M16.5 9c1.93 0 3.5-2.01 3.5-4.5S18.43 0 16.5 0 13 2.01 13 4.5 14.57 9 16.5 9Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#f97316">
+  <!-- First Paw Print (bottom left) -->
+  <g transform="translate(5, 45) scale(0.45) rotate(-15)">
+    <!-- Main pad -->
+    <path d="M50 90 C30 90, 20 75, 25 55 C30 35, 70 35, 75 55 C80 75, 70 90, 50 90 Z" />
+    <path d="M48 40 L52 40 L50 48 Z" fill="#fff" opacity="0" /> <!-- Just a center reference if needed -->
+    <!-- Toes -->
+    <ellipse cx="25" cy="35" rx="12" ry="16" transform="rotate(-25 25 35)" />
+    <ellipse cx="40" cy="18" rx="12" ry="15" transform="rotate(-10 40 18)" />
+    <ellipse cx="60" cy="18" rx="12" ry="15" transform="rotate(10 60 18)" />
+    <ellipse cx="75" cy="35" rx="12" ry="16" transform="rotate(25 75 35)" />
+  </g>
+
+  <!-- Second Paw Print (top right) -->
+  <g transform="translate(50, 10) scale(0.45) rotate(15)">
+    <!-- Main pad -->
+    <path d="M50 90 C30 90, 20 75, 25 55 C30 35, 70 35, 75 55 C80 75, 70 90, 50 90 Z" />
+    <!-- Toes -->
+    <ellipse cx="25" cy="35" rx="12" ry="16" transform="rotate(-25 25 35)" />
+    <ellipse cx="40" cy="18" rx="12" ry="15" transform="rotate(-10 40 18)" />
+    <ellipse cx="60" cy="18" rx="12" ry="15" transform="rotate(10 60 18)" />
+    <ellipse cx="75" cy="35" rx="12" ry="16" transform="rotate(25 75 35)" />
+  </g>
 </svg>
