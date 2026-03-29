@@ -42,15 +42,13 @@ export default function Loader() {
   }, [navigate]);
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
-      <div className="mb-6 bg-slate-800 text-white p-4 rounded-full shadow-sm animate-pulse-paw">
-        <PawPrint size={48} strokeWidth={1.5} />
+    <div className="flex-1 flex flex-col items-center justify-center p-6 text-center bg-white h-screen">
+      <div className="mb-6">
+        <PawPrint size={100} strokeWidth={1} className="animated-paw" />
       </div>
       
-      <h2 className="text-2xl font-bold mb-2 text-slate-900">Patitas al Día</h2>
-      
       {!error ? (
-        <p className="text-gray-500 font-medium tracking-wide animate-pulse">Cargando...</p>
+        <p className="text-orange-500 font-medium tracking-widest mt-4 uppercase text-sm animate-pulse">Cargando...</p>
       ) : (
         <div className="flex flex-col items-center mt-4">
           <p className="text-red-500 mb-4 bg-red-50 px-4 py-2 rounded-lg">Error de conexión con el servidor.</p>
